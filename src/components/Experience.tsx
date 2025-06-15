@@ -1,6 +1,8 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import ibmLogo from "../../public/ibm.png";
+import gdscLogo from "../../public/gdg.svg";
+import utmistLogo from "../../public/utmist.png";
 
 const experiences = [
   {
@@ -46,7 +48,7 @@ const experiences = [
   },
   {
     company: "Toronto Asian Art Museum",
-    title: "Software Engineer Intern",
+    title: "Software Engineer",
     date: "May 2024 – Aug 2024",
     tech: ["Java", "Android", "Firebase"],
     highlights: [
@@ -63,33 +65,44 @@ export const Experience = () => {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Experience</h2>
         <div className="max-w-4xl mx-auto space-y-8">
-          {experiences.map((exp, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <CardTitle className="text-xl">{exp.title}</CardTitle>
-                    <p className="text-lg font-semibold text-primary">{exp.company}</p>
+          {experiences.map((exp, index) => {
+            let logo = null;
+            if (exp.company === "IBM") logo = ibmLogo;
+            if (exp.company.includes("UTMIST")) logo = utmistLogo;
+            if (exp.company.includes("Google Developer Group")) logo = gdscLogo;
+            return (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <div className="flex items-center gap-3">
+                      {logo && (
+                        <img src={logo} alt={exp.company + ' logo'} className="w-14 h-14 object-contain rounded-full bg-white p-1 border" />
+                      )}
+                      <div>
+                        <CardTitle className="text-xl">{exp.title}</CardTitle>
+                        <p className="text-lg font-semibold text-primary">{exp.company}</p>
+                      </div>
+                    </div>
+                    <Badge variant="secondary">{exp.date}</Badge>
                   </div>
-                  <Badge variant="secondary">{exp.date}</Badge>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {exp.tech.map((tech) => (
-                    <Badge key={tech} variant="outline">{tech}</Badge>
-                  ))}
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {exp.highlights.map((highlight, idx) => (
-                    <li key={idx} className="text-muted-foreground">
-                      • {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {exp.tech.map((tech) => (
+                      <Badge key={tech} variant="outline">{tech}</Badge>
+                    ))}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {exp.highlights.map((highlight, idx) => (
+                      <li key={idx} className="text-muted-foreground">
+                        • {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
