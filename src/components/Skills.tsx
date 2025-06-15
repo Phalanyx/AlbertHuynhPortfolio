@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { 
@@ -8,30 +7,12 @@ import {
   Database, 
   Cloud, 
   Settings,
-  Javascript,
-  TypeScript,
-  React,
-  NextJs,
-  Docker,
-  Aws,
-  Git,
-  Github,
-  MongoDb,
-  Firebase,
-  Python,
-  Java,
-  Android,
-  Node,
-  Prisma,
-  Stripe,
-  FastApi,
-  Ruby,
-  Kubernetes,
-  PostgreSql,
-  Figma,
-  Bash,
-  Nginx,
-  Sql
+  Terminal,
+  FileCode,
+  Layers,
+  Box,
+  Cpu,
+  GitBranch
 } from "lucide-react";
 
 const skillCategories = [
@@ -39,16 +20,16 @@ const skillCategories = [
     category: "Languages",
     icon: <Code2 className="w-6 h-6" />,
     skills: [
-      { name: "JavaScript", icon: <Javascript className="w-4 h-4" /> },
-      { name: "TypeScript", icon: <TypeScript className="w-4 h-4" /> },
-      { name: "Java", icon: <Java className="w-4 h-4" /> },
-      { name: "Python", icon: <Python className="w-4 h-4" /> },
-      { name: "Ruby", icon: <Ruby className="w-4 h-4" /> },
-      { name: "SQL", icon: <Sql className="w-4 h-4" /> },
+      { name: "JavaScript", icon: <FileCode className="w-4 h-4" /> },
+      { name: "TypeScript", icon: <FileCode className="w-4 h-4" /> },
+      { name: "Java", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Python", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Ruby", icon: <Code2 className="w-4 h-4" /> },
+      { name: "SQL", icon: <Database className="w-4 h-4" /> },
       { name: "C", icon: <Code2 className="w-4 h-4" /> },
       { name: "Racket", icon: <Code2 className="w-4 h-4" /> },
       { name: "Haskell", icon: <Code2 className="w-4 h-4" /> },
-      { name: "Bash", icon: <Bash className="w-4 h-4" /> }
+      { name: "Bash", icon: <Terminal className="w-4 h-4" /> }
     ],
     color: "from-blue-500 to-cyan-500"
   },
@@ -56,9 +37,9 @@ const skillCategories = [
     category: "Frontend",
     icon: <Globe className="w-6 h-6" />,
     skills: [
-      { name: "React", icon: <React className="w-4 h-4" /> },
-      { name: "Next.js", icon: <NextJs className="w-4 h-4" /> },
-      { name: "React Native", icon: <React className="w-4 h-4" /> },
+      { name: "React", icon: <Layers className="w-4 h-4" /> },
+      { name: "Next.js", icon: <Globe className="w-4 h-4" /> },
+      { name: "React Native", icon: <Layers className="w-4 h-4" /> },
       { name: "HTML/CSS", icon: <Globe className="w-4 h-4" /> },
       { name: "Tailwind CSS", icon: <Globe className="w-4 h-4" /> }
     ],
@@ -68,12 +49,12 @@ const skillCategories = [
     category: "Backend",
     icon: <Server className="w-6 h-6" />,
     skills: [
-      { name: "Node.js", icon: <Node className="w-4 h-4" /> },
-      { name: "Django", icon: <Python className="w-4 h-4" /> },
-      { name: "FastAPI", icon: <FastApi className="w-4 h-4" /> },
-      { name: "Spring Boot", icon: <Java className="w-4 h-4" /> },
-      { name: "Ruby on Rails", icon: <Ruby className="w-4 h-4" /> },
-      { name: "Express.js", icon: <Node className="w-4 h-4" /> }
+      { name: "Node.js", icon: <Server className="w-4 h-4" /> },
+      { name: "Django", icon: <Code2 className="w-4 h-4" /> },
+      { name: "FastAPI", icon: <Server className="w-4 h-4" /> },
+      { name: "Spring Boot", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Ruby on Rails", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Express.js", icon: <Server className="w-4 h-4" /> }
     ],
     color: "from-purple-500 to-violet-500"
   },
@@ -81,11 +62,11 @@ const skillCategories = [
     category: "Databases",
     icon: <Database className="w-6 h-6" />,
     skills: [
-      { name: "PostgreSQL", icon: <PostgreSql className="w-4 h-4" /> },
-      { name: "MongoDB", icon: <MongoDb className="w-4 h-4" /> },
-      { name: "Firebase", icon: <Firebase className="w-4 h-4" /> },
-      { name: "Prisma", icon: <Prisma className="w-4 h-4" /> },
-      { name: "SQL", icon: <Sql className="w-4 h-4" /> },
+      { name: "PostgreSQL", icon: <Database className="w-4 h-4" /> },
+      { name: "MongoDB", icon: <Database className="w-4 h-4" /> },
+      { name: "Firebase", icon: <Database className="w-4 h-4" /> },
+      { name: "Prisma", icon: <Database className="w-4 h-4" /> },
+      { name: "SQL", icon: <Database className="w-4 h-4" /> },
       { name: "NoSQL", icon: <Database className="w-4 h-4" /> }
     ],
     color: "from-orange-500 to-red-500"
@@ -94,13 +75,13 @@ const skillCategories = [
     category: "Cloud & DevOps",
     icon: <Cloud className="w-6 h-6" />,
     skills: [
-      { name: "AWS EC2", icon: <Aws className="w-4 h-4" /> },
-      { name: "Docker", icon: <Docker className="w-4 h-4" /> },
-      { name: "Kubernetes", icon: <Kubernetes className="w-4 h-4" /> },
-      { name: "GitHub Actions", icon: <Github className="w-4 h-4" /> },
+      { name: "AWS EC2", icon: <Cloud className="w-4 h-4" /> },
+      { name: "Docker", icon: <Box className="w-4 h-4" /> },
+      { name: "Kubernetes", icon: <Cpu className="w-4 h-4" /> },
+      { name: "GitHub Actions", icon: <GitBranch className="w-4 h-4" /> },
       { name: "CI/CD", icon: <Settings className="w-4 h-4" /> },
-      { name: "Nginx", icon: <Nginx className="w-4 h-4" /> },
-      { name: "Linux", icon: <Settings className="w-4 h-4" /> }
+      { name: "Nginx", icon: <Server className="w-4 h-4" /> },
+      { name: "Linux", icon: <Terminal className="w-4 h-4" /> }
     ],
     color: "from-cyan-500 to-blue-500"
   },
@@ -108,13 +89,13 @@ const skillCategories = [
     category: "Tools & Technologies",
     icon: <Settings className="w-6 h-6" />,
     skills: [
-      { name: "Git", icon: <Git className="w-4 h-4" /> },
-      { name: "GitHub", icon: <Github className="w-4 h-4" /> },
+      { name: "Git", icon: <GitBranch className="w-4 h-4" /> },
+      { name: "GitHub", icon: <GitBranch className="w-4 h-4" /> },
       { name: "Jira", icon: <Settings className="w-4 h-4" /> },
       { name: "REST APIs", icon: <Server className="w-4 h-4" /> },
       { name: "Socket.IO", icon: <Server className="w-4 h-4" /> },
       { name: "JWT", icon: <Settings className="w-4 h-4" /> },
-      { name: "Stripe API", icon: <Stripe className="w-4 h-4" /> },
+      { name: "Stripe API", icon: <Settings className="w-4 h-4" /> },
       { name: "OpenAI API", icon: <Settings className="w-4 h-4" /> }
     ],
     color: "from-pink-500 to-rose-500"
