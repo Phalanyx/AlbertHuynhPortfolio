@@ -26,10 +26,10 @@ const staggerContainer = {
 
 const titles = [
   "Full-Stack Software Developer",
-  "Vibe Coder",
   "CS @ UofT",
   "Software Developer @ IBM",
-  "VP of Technology @ GDG"
+  "VP of Technology @ GDG",
+  "Vibe Coder"
 ];
 
 export const Hero = () => {
@@ -98,7 +98,7 @@ export const Hero = () => {
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
             Computer Science student at University of Toronto with experience at IBM, Google Developer Group, 
-            and a passion for building impactful web applications and mobile solutions.
+            and a passion for building impactful web applications with vibes.
           </motion.p>
           
           <motion.div 
