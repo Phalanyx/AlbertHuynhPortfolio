@@ -6,11 +6,12 @@ import { Github } from "lucide-react";
 
 const projects = [
   {
-    name: "Toronto Asian Art Museum Explorer",
-    description: "A Java-based Android application showcasing artifacts from TAAM. Provides users with a rich experience to browse, search, and view detailed information and images of historical pieces from the collection.",
-    img: "https://i.imgur.com/nzQoZPG.png",
-    github: "https://github.com/marc-issism/TAAMproject",
-    tech: ["Java", "Android", "Firebase"]
+    "id": 0,
+    "name": "EquiCourt",
+    "description": "EquiCourt is a multimodal, multi-LLM AI platform that resolves petty disputes in under 3 minutes. It ingests diverse evidence—PDFs, images, voice recordings—summarizes key facts using Cohere, and uses Gemini 2.0 with a legal RAG system to issue verdicts with cited Canadian laws. Designed to make justice swift, fair, and accessible.",
+    "img": ["https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/476/195/datas/original.png"],
+    "github": "https://github.com/oskip0906/Equicourt",  // Replace with actual repo if public
+    "tech": ["vite", "cohere", "gemini", "docling", "web speech API", "RAG"]
   },
   {
     name: "Climate Compass",
@@ -30,6 +31,7 @@ const projects = [
     name: "CodeWrld",
     description: "Online code editor and executor for 10+ languages with Docker-based sandboxing. Includes token-based auth (JWT), session management, and CI/CD deployment using AWS EC2 and Nginx.",
     github: "https://github.com/Phalanyx/CodeWrld",
+    img: "https://i.imgur.com/JS0ZkEd.png",
     tech: ["TypeScript", "Next.js", "Docker", "AWS", "Nginx"]
   },
   {
@@ -42,6 +44,7 @@ const projects = [
     name: "Little Learners",
     description: "An educational app helping youth with learning disabilities learn English through games, audio feedback, and personalized AI-generated books and visuals.",
     github: "https://github.com/Phalanyx/LittleLearners",
+    img: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/064/648/datas/original.jpg",
     tech: ["Next.js", "Node.js", "Prisma", "ChatGPT-4o"]
   }
 ];
