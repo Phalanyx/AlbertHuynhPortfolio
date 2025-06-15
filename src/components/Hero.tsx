@@ -35,7 +35,7 @@ export const Hero = () => {
         >
           <motion.h1 
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-400 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-foreground via-primary via-blue-400 via-purple-400 to-foreground bg-clip-text text-transparent bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite]"
           >
             Albert Huynh
           </motion.h1>
