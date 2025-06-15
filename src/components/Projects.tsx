@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -68,8 +67,7 @@ const cardVariants = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.6,
-      ease: "easeOut"
+      duration: 0.6
     }
   }
 };
