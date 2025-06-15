@@ -132,7 +132,7 @@ export const Hero = () => {
               <Github size={24} />
             </motion.a>
             <motion.a 
-              href="https://linkedin.com/in/albert-huynh" 
+              href="https://www.linkedin.com/in/albert-huynh-191099271/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
