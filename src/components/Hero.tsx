@@ -2,6 +2,7 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -23,7 +24,51 @@ const staggerContainer = {
   }
 };
 
+const titles = [
+  "Full-Stack Software Developer",
+  "Vibe Coder",
+  "CS @ UofT",
+  "Software Developer @ IBM",
+  "VP of Technology @ GDG"
+];
+
 export const Hero = () => {
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+
+  useEffect(() => {
+    const currentTitle = titles[currentTitleIndex];
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayedText.length < currentTitle.length) {
+          setDisplayedText(currentTitle.slice(0, displayedText.length + 1));
+          setTypingSpeed(100);
+        } else {
+          // Finished typing, wait then start deleting
+          setTypingSpeed(2000);
+          setIsDeleting(true);
+        }
+      } else {
+        // Deleting
+        if (displayedText.length > 0) {
+          setDisplayedText(displayedText.slice(0, -1));
+          setTypingSpeed(50);
+        } else {
+          // Finished deleting, move to next title
+          setIsDeleting(false);
+          setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+          setTypingSpeed(100);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, currentTitleIndex, typingSpeed]);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/10">
       <div className="container mx-auto px-6 text-center">
@@ -42,9 +87,10 @@ export const Hero = () => {
           
           <motion.h2 
             variants={fadeInUp}
-            className="text-xl md:text-2xl text-primary font-semibold"
+            className="text-xl md:text-2xl text-primary font-semibold h-8 flex items-center justify-center"
           >
-            Full-Stack Software Developer
+            {displayedText}
+            <span className="animate-pulse ml-1">|</span>
           </motion.h2>
           
           <motion.p 
