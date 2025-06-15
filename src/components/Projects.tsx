@@ -22,7 +22,7 @@ const projects = [
   },
   {
     name: "no.ff",
-    description: "A League of Legends analytics tool that uses ML (70% accuracy) to predict outcomes and provide strategic insight. Features a chatbot powered by Gemini's API for real-time interaction.",
+    description: "A League of Legends analytics tool that uses a classification model (70% accuracy) to predict outcomes and provide strategic insight. Features a chatbot powered by Gemini's API for real-time interaction.",
     img: "https://i.imgur.com/xwqUtdF.png",
     github: "https://github.com/no-ff/no.ff",
     tech: ["Next.js", "Django", "Python", "TensorFlow"]

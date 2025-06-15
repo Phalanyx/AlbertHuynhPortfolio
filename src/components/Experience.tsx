@@ -23,8 +23,7 @@ const experiences = [
     date: "May 2025 – Present",
     tech: ["React", "Next.js", "Django", "Docker", "GitHub Actions", "PostgreSQL"],
     highlights: [
-      "Built the public site and internal platform for Canada's largest ML-focused student organization.",
-      "Created a job application portal used by 10+ directors to review 100+ applicants."
+      "Collaborated and built a responsive website for Canada's largest ML-focused student organization.",
     ]
   },
   {
