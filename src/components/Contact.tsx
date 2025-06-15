@@ -20,7 +20,7 @@ export const Contact = () => {
               <span>alberthuynh.dev@gmail.com</span>
             </a>
             <a 
-              href="https://linkedin.com/in/albert-huynh" 
+              href="https://www.linkedin.com/in/albert-huynh-191099271/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center space-x-3 text-lg hover:text-primary transition-colors group"
