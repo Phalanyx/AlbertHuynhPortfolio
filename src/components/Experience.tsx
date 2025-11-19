@@ -8,53 +8,60 @@ import utmistLogo from "../../public/utmist.png";
 const experiences = [
   {
     company: "IBM",
-    title: "Software Developer Intern",
+    title: "Software Engineer",
     date: "May 2025 – Dec 2025",
-    tech: ["Ruby on Rails", "Kubernetes", "Whisper", "Docling"],
+    tech: ["Ruby", "TypeScript", "Ruby on Rails", "Redis", "Kubernetes", "Helm", "GitHub Actions"],
     highlights: [
-      "Built and deployed internal tools for IBM's Author Workbench LMS platform.",
-      "Automated conversion of 1000+ PDFs and PowerPoints into course-ready content using Docling.",
-      "Integrated OpenAI Whisper to generate transcripts for uploaded course videos, improving accessibility."
+      "Built internal tools and microservices for IBM's Learning Management System using Ruby and TypeScript.",
+      "Implemented AI learning paths by developing vector similarity search with pgvector and Ruby on Rails.",
+      "Engineered a generalized API gateway serving 9M+ annual users using TypeScript, Node, and Redis.",
+      "Saved 100+ hours by automating PDFs and PowerPoints into LMS-ready course content using Sidekiq and Redis.",
+      "Reduced cloud costs by $10k+ by migrating 5000+ course videos to YouTube from AWS S3 buckets using Ruby.",
+      "Automated 500+ hours of course transcriptions by integrating OpenAI Whisper and creating a chunking algorithm.",
+      "Sped up video processing pipeline 97% by developing a Ruby on Rails and Redis Pub/Sub microservice, utilizing CUDA video codecs and deployed with Kubernetes, Helm, and GitHub Actions.",
+      "Implemented unit and integration tests with RSpec and Jest across Ruby and TypeScript services."
     ]
   },
   {
     company: "University of Toronto Machine Intelligence Team (UTMIST)",
-    title: "Software Developer",
+    title: "Software Director",
     date: "May 2025 – Present",
-    tech: ["React", "Next.js", "Django", "Docker", "GitHub Actions", "PostgreSQL"],
+    tech: ["TypeScript", "React", "Supabase", "Next.js", "Google APIs"],
     highlights: [
-      "Collaborated and built a responsive website for Canada's largest ML-focused student organization.",
+      "Led 5+ developers to launch an open source content management platform using TypeScript, React, and Supabase.",
+      "Streamlined 500+ resumes to companies at social events by creating a REST API with Google APIs in Next.js."
     ]
   },
   {
     company: "Google Developer Group",
-    title: "VP of Technology",
-    date: "May 2025 – Present",
-    tech: ["TypeScript", "Next.js", "React", "Firebase", "Figma"],
+    title: "Lead Software Engineer",
+    date: "Apr 2025 – Present",
+    tech: ["TypeScript", "Python", "FastAPI", "Gemini", "PDF.js"],
     highlights: [
-      "Leading a 20+ member dev team to build web platforms for startups and GDG infrastructure."
+      "Led a team of 10+ developers to create open source projects and build internal tools in Typescript and Python.",
+      "Automated reviews for 50+ resumes by creating a stack ranking pipeline using FastAPI, Gemini, and PDF.js.",
+      "Sped up workflows by 65% by creating an MCP server for admins to create and manage events for 100+ students."
     ]
   },
   {
-    company: "Google Developer Group",
+    company: "GenAI Genesis",
     title: "Software Engineer",
     date: "Sep 2024 – Apr 2025",
-    tech: ["TypeScript", "Next.js", "Firebase", "Docker", "GitHub Actions"],
+    tech: ["TypeScript", "Firebase", "Python"],
     highlights: [
-      "Built website for Canada's largest AI hackathon with 2200+ registrants and 700+ participants.",
-      "Developed application management system for 20+ reviewers to assess submissions.",
-      "Reduced cloud usage by 80% by optimizing image loading and processing."
+      "Built a website for Canada's largest AI hackathon with 2200+ users using TypeScript and Firebase.",
+      "Processed 5000+ documents, providing the team with cleaned user data for event communication using Python."
     ]
   },
   {
     company: "Toronto Asian Art Museum",
     title: "Software Engineer",
     date: "May 2024 – Aug 2024",
-    tech: ["Java", "Android", "Firebase"],
+    tech: ["Java", "Android", "Firebase", "JUnit", "Mockito"],
     highlights: [
-      "Built an Android app to showcase 100+ artifacts using Java and Firebase.",
-      "Wrote unit tests using JUnit and Mockito.",
-      "Streamlined upload of media assets to Firebase CDN and RTDB."
+      "Spearheaded a data management Android app showcasing 100+ artifacts using Java, Android, and Firebase.",
+      "Streamlined the artifact image and document upload process from Firebase CDN to Firebase RTD.",
+      "Created unit test cases using JUnit and Mockito on critical modules."
     ]
   }
 ];
@@ -108,7 +115,7 @@ export const Experience = () => {
             if (exp.company.includes("Google Developer Group")) logo = gdscLogo;
             return (
               <motion.div key={index} variants={cardVariants}>
-                <Card className="hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-primary/30">
+                <Card className="hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-primary/50 hover:bg-secondary/10 border-border/50 bg-card/50 backdrop-blur-sm">
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div className="flex items-center gap-3">

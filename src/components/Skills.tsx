@@ -12,7 +12,10 @@ import {
   Layers,
   Box,
   Cpu,
-  GitBranch
+  GitBranch,
+  Brain,
+  Smartphone,
+  Users
 } from "lucide-react";
 
 const skillCategories = [
@@ -20,85 +23,70 @@ const skillCategories = [
     category: "Languages",
     icon: <Code2 className="w-6 h-6" />,
     skills: [
+      { name: "Python", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Java", icon: <Code2 className="w-4 h-4" /> },
       { name: "JavaScript", icon: <FileCode className="w-4 h-4" /> },
       { name: "TypeScript", icon: <FileCode className="w-4 h-4" /> },
-      { name: "Java", icon: <Code2 className="w-4 h-4" /> },
-      { name: "Python", icon: <Code2 className="w-4 h-4" /> },
       { name: "Ruby", icon: <Code2 className="w-4 h-4" /> },
-      { name: "SQL", icon: <Database className="w-4 h-4" /> },
-      { name: "C", icon: <Code2 className="w-4 h-4" /> },
-      { name: "Racket", icon: <Code2 className="w-4 h-4" /> },
-      { name: "Haskell", icon: <Code2 className="w-4 h-4" /> },
       { name: "Bash", icon: <Terminal className="w-4 h-4" /> }
     ],
     color: "from-blue-500 to-cyan-500"
   },
   {
-    category: "Frontend",
+    category: "Frameworks & Libraries",
     icon: <Globe className="w-6 h-6" />,
     skills: [
-      { name: "React", icon: <Layers className="w-4 h-4" /> },
+      { name: "Node", icon: <Server className="w-4 h-4" /> },
+      { name: "Express", icon: <Server className="w-4 h-4" /> },
+      { name: "Prisma", icon: <Database className="w-4 h-4" /> },
+      { name: "Ruby on Rails", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Android", icon: <Smartphone className="w-4 h-4" /> },
+      { name: "Expo", icon: <Smartphone className="w-4 h-4" /> },
+      { name: "Selenium", icon: <Code2 className="w-4 h-4" /> },
       { name: "Next.js", icon: <Globe className="w-4 h-4" /> },
-      { name: "React Native", icon: <Layers className="w-4 h-4" /> },
-      { name: "HTML/CSS", icon: <Globe className="w-4 h-4" /> },
-      { name: "Tailwind CSS", icon: <Globe className="w-4 h-4" /> }
+      { name: "React", icon: <Layers className="w-4 h-4" /> },
+      { name: "React Native", icon: <Layers className="w-4 h-4" /> }
     ],
     color: "from-green-500 to-emerald-500"
   },
   {
-    category: "Backend",
-    icon: <Server className="w-6 h-6" />,
+    category: "Tools",
+    icon: <Settings className="w-6 h-6" />,
     skills: [
-      { name: "Node.js", icon: <Server className="w-4 h-4" /> },
-      { name: "Django", icon: <Code2 className="w-4 h-4" /> },
-      { name: "FastAPI", icon: <Server className="w-4 h-4" /> },
-      { name: "Spring Boot", icon: <Code2 className="w-4 h-4" /> },
-      { name: "Ruby on Rails", icon: <Code2 className="w-4 h-4" /> },
-      { name: "Express.js", icon: <Server className="w-4 h-4" /> }
+      { name: "Git", icon: <GitBranch className="w-4 h-4" /> },
+      { name: "Github", icon: <GitBranch className="w-4 h-4" /> },
+      { name: "Jira", icon: <Settings className="w-4 h-4" /> },
+      { name: "AWS", icon: <Cloud className="w-4 h-4" /> },
+      { name: "Linux", icon: <Terminal className="w-4 h-4" /> },
+      { name: "Docker", icon: <Box className="w-4 h-4" /> },
+      { name: "Firebase", icon: <Database className="w-4 h-4" /> },
+      { name: "SQL", icon: <Database className="w-4 h-4" /> },
+      { name: "NoSQL", icon: <Database className="w-4 h-4" /> },
+      { name: "REST API", icon: <Server className="w-4 h-4" /> },
+      { name: "MongoDB", icon: <Database className="w-4 h-4" /> },
+      { name: "Kubernetes", icon: <Cpu className="w-4 h-4" /> },
+      { name: "Helm", icon: <Settings className="w-4 h-4" /> }
     ],
     color: "from-purple-500 to-violet-500"
   },
   {
-    category: "Databases",
-    icon: <Database className="w-6 h-6" />,
+    category: "Concepts",
+    icon: <Brain className="w-6 h-6" />,
     skills: [
-      { name: "PostgreSQL", icon: <Database className="w-4 h-4" /> },
-      { name: "MongoDB", icon: <Database className="w-4 h-4" /> },
-      { name: "Firebase", icon: <Database className="w-4 h-4" /> },
-      { name: "Prisma", icon: <Database className="w-4 h-4" /> },
-      { name: "SQL", icon: <Database className="w-4 h-4" /> },
-      { name: "NoSQL", icon: <Database className="w-4 h-4" /> }
+      { name: "Backend Development", icon: <Server className="w-4 h-4" /> },
+      { name: "Frontend Development", icon: <Globe className="w-4 h-4" /> },
+      { name: "Fullstack Development", icon: <Layers className="w-4 h-4" /> },
+      { name: "Software Engineering", icon: <Code2 className="w-4 h-4" /> },
+      { name: "Machine Learning", icon: <Brain className="w-4 h-4" /> },
+      { name: "Networking", icon: <Server className="w-4 h-4" /> },
+      { name: "CI/CD", icon: <Settings className="w-4 h-4" /> },
+      { name: "Microservices", icon: <Box className="w-4 h-4" /> },
+      { name: "Infrastructure Engineering", icon: <Cloud className="w-4 h-4" /> },
+      { name: "DevOps", icon: <Settings className="w-4 h-4" /> },
+      { name: "Automation", icon: <Settings className="w-4 h-4" /> },
+      { name: "Agile", icon: <Users className="w-4 h-4" /> }
     ],
     color: "from-orange-500 to-red-500"
-  },
-  {
-    category: "Cloud & DevOps",
-    icon: <Cloud className="w-6 h-6" />,
-    skills: [
-      { name: "AWS EC2", icon: <Cloud className="w-4 h-4" /> },
-      { name: "Docker", icon: <Box className="w-4 h-4" /> },
-      { name: "Kubernetes", icon: <Cpu className="w-4 h-4" /> },
-      { name: "GitHub Actions", icon: <GitBranch className="w-4 h-4" /> },
-      { name: "CI/CD", icon: <Settings className="w-4 h-4" /> },
-      { name: "Nginx", icon: <Server className="w-4 h-4" /> },
-      { name: "Linux", icon: <Terminal className="w-4 h-4" /> }
-    ],
-    color: "from-cyan-500 to-blue-500"
-  },
-  {
-    category: "Tools & Technologies",
-    icon: <Settings className="w-6 h-6" />,
-    skills: [
-      { name: "Git", icon: <GitBranch className="w-4 h-4" /> },
-      { name: "GitHub", icon: <GitBranch className="w-4 h-4" /> },
-      { name: "Jira", icon: <Settings className="w-4 h-4" /> },
-      { name: "REST APIs", icon: <Server className="w-4 h-4" /> },
-      { name: "Socket.IO", icon: <Server className="w-4 h-4" /> },
-      { name: "JWT", icon: <Settings className="w-4 h-4" /> },
-      { name: "Stripe API", icon: <Settings className="w-4 h-4" /> },
-      { name: "OpenAI API", icon: <Settings className="w-4 h-4" /> }
-    ],
-    color: "from-pink-500 to-rose-500"
   }
 ];
 

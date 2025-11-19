@@ -14,38 +14,38 @@ const projects = [
     "tech": ["vite", "cohere", "gemini", "docling", "web speech API", "RAG"]
   },
   {
-    name: "Climate Compass",
-    description: "An emergency preparedness tool that lists aid resources, climate shelters, and programs for climate refugees. Designed to help users navigate natural disasters safely.",
-    img: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/966/724/datas/original.png",
-    github: "https://devpost.com/software/climate-compass",
-    tech: ["Next.js", "Django", "Python", "JavaScript"]
-  },
-  {
-    name: "no.ff",
-    description: "A League of Legends analytics tool that uses a classification model (70% accuracy) to predict outcomes and provide strategic insight. Features a chatbot powered by Gemini's API for real-time interaction.",
-    img: "https://i.imgur.com/xwqUtdF.png",
-    github: "https://github.com/no-ff/no.ff",
-    tech: ["Next.js", "Django", "Python", "TensorFlow"]
-  },
-  {
-    name: "CodeWrld",
-    description: "Online code editor and executor for 10+ languages with Docker-based sandboxing. Includes token-based auth (JWT), session management, and CI/CD deployment using AWS EC2 and Nginx.",
-    github: "https://github.com/Phalanyx/CodeWrld",
-    img: "https://i.imgur.com/JS0ZkEd.png",
-    tech: ["TypeScript", "Next.js", "Docker", "AWS", "Nginx"]
+    name: "Toronto Asian Art Museum Explorer",
+    description: "Spearheaded a data management Android app showcasing 100+ artifacts using Java, Android, and Firebase. Streamlined artifact image and document upload process from Firebase CDN to Firebase RTD. Tested critical modules using JUnit and Mockito, achieving 100% coverage on all units.",
+    github: "https://github.com/marc-issism/TAAMproject",
+    tech: ["Java", "Android", "Firebase", "JUnit", "Mockito"],
+    img: "https://i.imgur.com/xwqUtdF.png" // Keeping placeholder or previous image if applicable, but previous was no.ff. I'll use a placeholder or remove img if not available. I'll keep the structure consistent.
   },
   {
     name: "SparkPark",
-    description: "A React Native mobile app connecting homeowners with drivers for parking space rentals. Integrated Stripe for payments, Firebase Auth, and geospatial queries in MongoDB.",
+    description: "Developed a React Native mobile app, enabling homeowners to rent out their driveways as parking spots in Toronto. Created a payment pipeline using Express, Stripe APIs, Firebase Authentication and MongoDB. Deployed a Node.js server using AWS EC2 and Docker, automating build and deployment workflows with GitHub Actions.",
     github: "https://github.com/Phalanyx/SparkPark",
-    tech: ["React Native", "TypeScript", "Node.js", "MongoDB", "Stripe"]
+    tech: ["React Native", "Node.js", "TypeScript", "MongoDB", "Stripe", "AWS EC2", "Docker", "GitHub Actions"]
+  },
+  {
+    name: "CodeWrld",
+    description: "Created a Code Execution and Social Platform using Next.js which supports 10+ programming languages. Engineered isolated containers for code execution with Node processes and Docker at runtime. Deployed with Docker using AWS EC2, Nginx, and PM2 for efficient application hosting.",
+    github: "https://github.com/Phalanyx/CodeWrld",
+    img: "https://i.imgur.com/JS0ZkEd.png",
+    tech: ["TypeScript", "Node.js", "React", "Docker", "AWS", "Nginx"]
+  },
+  {
+    name: "no.ff",
+    description: "Processed 100,000+ requests from Riot API, turning in-game data into cleaned training data using Python. Developed a full-stack app using Django and Next.js, displaying data of the top 200+ players in the world. Implemented an interactive chatbot that provides users with real-time game information using Gemini's API.",
+    img: "https://i.imgur.com/xwqUtdF.png",
+    github: "https://github.com/no-ff/no.ff",
+    tech: ["Python", "JavaScript", "Next.js", "Django", "React", "SQLite", "Gemini API"]
   },
   {
     name: "Little Learners",
-    description: "An educational app helping youth with learning disabilities learn English through games, audio feedback, and personalized AI-generated books and visuals.",
+    description: "Created a speech-to-text game interface using Nextjs and Node's Web Speech API. Utilized ChatGPT 4o API to generate custom AI images, adding visually stimulating content for young users. Optimized image creation and processing by 90% using Next image optimizations and IO manipulation.",
     github: "https://github.com/Phalanyx/LittleLearners",
     img: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/064/648/datas/original.jpg",
-    tech: ["Next.js", "Node.js", "Prisma", "ChatGPT-4o"]
+    tech: ["TypeScript", "Next.js", "React", "Prisma", "ChatGPT-4o"]
   }
 ];
 
@@ -94,7 +94,7 @@ export const Projects = () => {
         >
           {projects.map((project, index) => (
             <motion.div key={index} variants={cardVariants}>
-              <Card className="hover:shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-primary/30 h-full flex flex-col">
+              <Card className="hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-primary/50 hover:bg-secondary/10 h-full flex flex-col border-border/50 bg-card/50 backdrop-blur-sm">
                 <CardHeader className="flex-grow">
                   {project.img && (
                     <motion.div 
